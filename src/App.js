@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
 
-import { Navbar, Exchanges, Homepage, Cryptocurrencies, News, CryptoDetails } from './components';
+import { Navbar, Exchanges, Homepage, Cryptocurrencies, News, CryptoDetails, AboutCoin } from './components';
 import './App.css';
 
 const App = () => {
@@ -30,12 +30,15 @@ const App = () => {
                             <Route exact path="/news">
                                 <News />
                             </Route>
+                            <Route exact path="/about/:coinId">
+                                <AboutCoin />
+                            </Route>
                         </Switch>
                     </div>
                 </Layout>
                 <div className="footer">
                     <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>
-                        Cryptohub by dk <br />
+                        CoinTracker <br />
                         All rights reserved
                     </Typography.Title>
                     <Space>
